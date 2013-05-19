@@ -27,7 +27,7 @@ libraryDependencies ++= Seq(
   "org.mockito" % "mockito-core" % "1.9.5"
 )
 
-seq(ScctPlugin.instrumentSettings : _*)
+seq(sbt.scct.ScctPlugin.instrumentSettings : _*)
 
 publishTo <<= version { (v: String) =>
   val nexus = "https://oss.sonatype.org/"
