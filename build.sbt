@@ -27,6 +27,8 @@ libraryDependencies ++= Seq(
   "org.mockito" % "mockito-core" % "1.9.5"
 )
 
+resolvers += "scct-repository" at "http://mtkopone.github.com/scct/maven-repo"
+
 seq(sbt.scct.ScctPlugin.instrumentSettings : _*)
 
 publishTo <<= version { (v: String) =>
